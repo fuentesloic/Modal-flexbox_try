@@ -1,0 +1,342 @@
+@font-face {
+  font-family: 'quicksand';
+  src: url('police/quicksand_light.otf');
+  src: url('police/quicksand_regular.otf');
+}
+@font-face {
+  font-family: 'fontawesome';
+}
+@font-face {
+  font-family: 'BrokenChalk';
+  src: url('police/BrokenChalk.ttf');
+}
+@font-face {
+  font-family: 'PWChalk';
+  src: url('policle/PWChalk.ttf');
+}
+
+body
+{
+  width: auto;
+  height: auto;
+  background-image: url(img/bg_wall.jpg);
+  background-size: 100% 100%;
+  background-attachment:fixed;
+  background-repeat: no-repeat;
+  font-family: "quicksand", "fontawesome", "BrokenChalk", "PWChalk","Source Sans Pro", Helvetica, sans-serif;
+  color: #414f57;
+  text-transform: uppercase;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0px;
+  padding-top: 75px;
+}
+main
+{
+  margin: auto;
+}
+
+main section
+{
+  min-width: 380px;
+  background-color: #fefefe;
+  border: 0.5px #6f7173 solid;
+  text-align: center;
+  border-radius: 2%;
+  opacity: 0.95;
+}
+main section img
+{
+  width: 120px;
+  border-radius: 100%;
+  display: block;
+  margin: auto;
+  z-index: 1;
+  position: relative;
+  padding: 0px 30px;
+  background-color: white;
+  margin-top: 60px;
+}
+h1
+{
+  padding-top: 8px;
+  font-size: 1.6em;
+  letter-spacing: 0.15em;
+  opacity: 0.9;
+}
+h2
+{
+  font-weight: lighter;
+  font-size: 1em;
+  letter-spacing: 0.18em;
+  margin-bottom: 50px;
+}
+main footer nav
+{
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  text-align: center;
+}
+a
+{
+  font-family: "quicksand", "PWChalk";
+  color: white;
+  list-style-type : none;
+  flex: 3;
+  text-decoration: none;
+  text-shadow: 1px 0.5px black;
+  border: 1.5px solid transparent;
+}
+
+/* contact icones */
+
+main a:nth-child(2)::after
+{
+  content: "\f1d9";
+}
+main a:nth-child(1)::after
+{
+  content: "\f08c";
+}
+main a:nth-child(3)::after
+{
+  content: "\f09b";
+}
+main a::after
+{
+  font-family: "fontawesome";
+  bottom: 0px;
+  padding: : 5px;
+  font-size: 2.6em;
+  text-decoration: none;
+  position: relative;
+  color: #f5f5f5;
+  top: 0px;
+  background-color: transparent;
+}
+main a:hover
+{
+  text-shadow: 2px 2px black;
+}
+main a:hover::after
+{
+  color: grey;
+}
+main a:active
+{
+  text-shadow: -1px -1px black;
+}
+
+/*
+Put a line across img profile picture
+Change that to border top on H1 with Z index
+*/
+
+.trait1
+{
+  border-top: 2px solid #6f7173;
+  position: relative;
+  min-width: 380px;
+  z-index: 0;
+  top: -60px;
+}
+
+/* Projets on aside */
+
+aside
+{
+  margin: auto;
+  min-width: 380px;
+  width: 380px;
+  text-align: center;
+  height: auto;
+}
+
+aside h1
+{
+  position: relative;
+  color: white;
+  font-size: 2.2em;
+  font-weight: lighter;
+  font-family: "BrokenChalk", "PWChalk";
+  margin-top: 30px;
+  text-shadow: 3px 5px black;
+}
+aside nav
+{
+  margin: 0;
+  padding: 0;
+  min-width: 380px;
+  width: 380px;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: space-around;
+}
+aside a
+{
+  flex: 2;
+  background-color: transparent;
+  margin: 0px 29px;
+  padding: 10px 0px;
+  z-index: 1;
+}
+aside img
+{
+  width: 130px;
+  border-radius: 5%;
+  opacity: 0.8;
+  z-index: -1;
+  box-shadow:4px 4px 4px #333333, 2px 2px 2px #333333;
+}
+
+/* style to each project
+
+aside nav a::before
+{
+  content: "\f04d";
+  font-size: 0.8em;
+  color: white;
+  opacity: 0.5;
+  position: relative;
+  left: 182px;
+  top: -8px;
+  transform: rotate(316deg);
+  -moz-transform: rotate(316deg);
+  -ms-transform: rotate(316deg);
+  -webkit-transform: rotate(316deg);
+  z-index: 2;
+}
+aside nav a::after
+{
+  content: "\f04d";
+  font-size: 0.8em;
+  color: white;
+  opacity: 0.5;
+  position: relative;
+  right: 181px;
+  top: -66px;
+  transform: rotate(137deg);
+  -moz-transform: rotate(137deg);
+  -ms-transform: rotate(137deg);
+  z-index: 2;
+}
+
+*/
+
+aside nav a img:hover
+{
+  opacity: 1;
+}
+aside nav a img:active
+{
+  position: relative;
+  box-shadow:4px 4px 4px #111111, 2px 2px 2px #111111;
+  top: 0.5px;
+
+}
+
+/* Modal "focus on project" part */
+
+.modaloverlay
+{
+  background:rgba(0,0,0,0.8);
+  bottom:0;
+  left:0;
+  opacity:0;
+  pointer-events:none;
+  position:fixed;
+  right:0;
+  top:0;
+  z-index:-1;
+  display: none;
+}
+.modaloverlay:target
+{
+  display: block;
+  opacity:1;
+  pointer-events:auto;
+  z-index:99999;
+}
+.modal
+{
+  background-color: white;
+  height: 50%;
+  position:relative;
+  margin: 60px;
+  padding: 0px;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  min-width: 320px;
+}
+.modal a
+{
+  border: none;
+  margin: 0px;
+  padding: 0px;
+}
+.modal > a::before
+{
+  font-family: "fontawesome";
+  content: "\f00d";
+  font-size: 1.5em;
+  flex: 1;
+  color: red;
+  position: absolute;
+  top: 10px;
+  left: 15px;
+}
+.modal div a
+{
+  display: block;
+  border-radius: 5%;
+  width: 15%;
+  background-color: #1C7988;
+  color: white;
+  padding: 10px;
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+}
+.modal div a::before
+{
+  display: none;
+}
+.modal h1
+{
+  padding: 10px;
+  margin: 0px 100px;
+  background-color: #1C7988;
+}
+
+/* end modal "focus on project" part */
+
+/* aside footer */
+
+aside footer
+{
+  background-color: transparent;
+}
+aside footer > a
+{
+  background-color: transparent;
+}
+aside footer h1
+{
+  font-size: 1.4em;
+  margin: -5px 0px 0px 0px;
+  text-shadow: 4px 4px black;
+}
+aside footer h1:hover
+{
+  opacity: 0.9;
+}
+aside footer h1:active
+{
+  text-shadow: 5px 6px black;
+}
+
+/* end aside footer */
